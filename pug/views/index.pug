@@ -1,0 +1,14 @@
+extends layouts/base.pug
+block content
+  h1 Lista de personajes
+  table(id="table-1" class="table")
+    thead
+      tr
+        td Nombre
+        td Foto
+    tbody
+      each p in personajes
+        tr
+          td= p.name
+          td
+            img(width=150 src=p.image)
